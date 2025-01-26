@@ -4,7 +4,8 @@
 - Language: Typescript
 - Styles: React-Jss, Shadcn-ui, TailwindCss
 - Tools: Tanstack router, Redux Toolkit, Redux Toolkit Query
-- Build: RsBuild
+- Precommit: husky
+- Build: RsBuild, ESlint, Prettier
 
 ## Setup
 
