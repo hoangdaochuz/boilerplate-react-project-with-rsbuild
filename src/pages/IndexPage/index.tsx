@@ -5,10 +5,13 @@ import { AspectRatio } from '@/shadcn_components/ui/aspect-ratio';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/store';
 import { decrement, increment } from '@/redux/features/counter/counterSlice';
+import { useGetPokemonByNameQuery } from '@/redux/services/pokemon';
 const IndexPage = () => {
   const classes = useStyles();
   const count = useSelector((state: RootState) => state.counter.value);
   const dispatch = useDispatch();
+  const { data, isError, isLoading } = useGetPokemonByNameQuery('bulbasaur');
+  console.log('🚀 ~ IndexPage ~ data:', data);
   return (
     <div className="content">
       <h1 className={classes.title}>Rsbuild with React Helllo123</h1>
